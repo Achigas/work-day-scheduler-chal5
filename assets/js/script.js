@@ -54,7 +54,7 @@ function savePlannerData() {
 //displays data in time slots
 function displayPlannerData() {
     dayPlanner.forEach(function (hour) {
-        ($(hour.id).val(hour.dataPlanner))
+        $("#" + hour.id).val(hour.dataPlanner)
     }) 
 }
 
@@ -95,8 +95,6 @@ dayPlanner.forEach(function(hour) {
         } else if (hour.time > moment().format("HH")) {
             hourData.addClass("future")
     }
-
-    console.log(hour.time)
 
     hourInput.append(hourData);
     
