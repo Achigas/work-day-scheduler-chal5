@@ -5,7 +5,7 @@ A planner for your everyday business needs!
 * [General info](#general-info)
 * [Screenshots](#screenshots)
 * [URL](#url)
-* [Code](#code
+* [Code](#code)
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
@@ -13,18 +13,21 @@ A planner for your everyday business needs!
 ## General info
 The purpose of the project is to create a daily planner that helps to schedule your work day. 
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
+## Screenshot
+![Work Day Scheduler](./assets/images/planner.png)
 
 ## URL
-[]()
+[Work Day Scheduler](https://achigas.github.io/work-day-scheduler-chal5/)
 
 ## Code
-Show examples of usage:
-`put-your-code-here`
+* HTML
+* CSS
+* Javascript
+    * Jquery
+
 
 ## Status
-Project is complete.
+Project is complete. 
 
 ## Inspiration
 Alex Chigas. Project inspired by UCLAx Challenge 5.
