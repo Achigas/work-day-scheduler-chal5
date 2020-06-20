@@ -54,7 +54,7 @@ function savePlannerData() {
 //displays data in time slots
 function displayPlannerData() {
     dayPlanner.forEach(function (hour) {
-        $($(hour.id).val(hour.dataPlanner))
+        ($(hour.id).val(hour.dataPlanner))
     }) 
 }
 
@@ -87,7 +87,7 @@ dayPlanner.forEach(function(hour) {
         .addClass("col-md-9 description p-0")
     var hourData = $("<textarea>");
         hourData.attr("id", hour.id);
-
+    //compare time to current time - color codes
         if (hour.time < moment().format("HH")) {
             hourData.addClass("past")
         } else if (hour.time === moment().format("HH")) {
@@ -98,7 +98,7 @@ dayPlanner.forEach(function(hour) {
 
     hourInput.append(hourData);
     
-    // creates save button
+    // create save button
     var saveButton = $("<i class='far fa-save fa-lg'></i>")
     var savePlan = $("<button>")
         .addClass("col-md-1 saveBtn");
@@ -111,9 +111,9 @@ dayPlanner.forEach(function(hour) {
     //assure save button functions appropriately
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
+    //saving the correct information into array
     var saveIndex = $(this).siblings(".description").children(".future").attr("id");
     dayPlanner[saveIndex].dataPlanner = $(this).siblings(".description").children(".future").val();
-    console.log(saveIndex);
     savePlannerData();
     displayPlannerData();
 })
