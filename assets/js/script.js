@@ -88,13 +88,15 @@ dayPlanner.forEach(function(hour) {
     var hourData = $("<textarea>");
         hourData.attr("id", hour.id);
     //compare time to current time - color codes
-        if (hour.time < moment().format("HH")) {
-            hourData.addClass("past")
-        } else if (hour.time === moment().format("HH")) {
+        if (hour.time == moment().format("HH")) {
             hourData.addClass("present")
+        } else if (hour.time < moment().format("HH")) {
+                hourData.addClass("past")
         } else if (hour.time > moment().format("HH")) {
             hourData.addClass("future")
     }
+
+    console.log(hour.time)
 
     hourInput.append(hourData);
     
