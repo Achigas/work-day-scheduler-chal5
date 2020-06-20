@@ -103,10 +103,12 @@ dayPlanner.forEach(function(hour) {
     var savePlan = $("<button>")
         .addClass("col-md-1 saveBtn");
 
+    //append elements to row 
     savePlan.append(saveButton);    
     timeRow.append(timeField, hourInput, savePlan)
 })
 
+    //assure save button functions appropriately
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
     var saveIndex = $(this).siblings(".description").children(".future").attr("id");
