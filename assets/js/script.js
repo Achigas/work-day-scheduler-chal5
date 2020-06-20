@@ -98,14 +98,14 @@ dayPlanner.forEach(function(hour) {
 
     hourInput.append(hourData);
     
-    // create save button
-    var saveButton = $("<i class='far fa-save fa-lg'></i>")
-    var savePlan = $("<button>")
+    // create save button for end of row
+    var saveIcon = $("<i class='far fa-save fa-lg'></i>")
+    var saveEnd = $("<button>")
         .addClass("col-md-1 saveBtn");
 
     //append elements to row 
-    savePlan.append(saveButton);    
-    timeRow.append(timeField, hourInput, savePlan)
+    saveEnd.append(saveIcon);    
+    timeRow.append(timeField, hourInput, saveEnd)
 })
 
     //assure save button functions appropriately
