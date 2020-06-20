@@ -112,8 +112,8 @@ dayPlanner.forEach(function(hour) {
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
     //saving the correct information into array
-    var saveIndex = $(this).siblings(".description").children(".future").attr("id");
-    dayPlanner[saveIndex].dataPlanner = $(this).siblings(".description").children(".future").val();
+    var saveIndex = $(this).siblings(".description").children().attr("id");
+    dayPlanner[saveIndex].dataPlanner = $(this).siblings(".description").children().val();
     savePlannerData();
     displayPlannerData();
 })
